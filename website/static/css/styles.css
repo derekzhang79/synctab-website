@@ -223,7 +223,7 @@ form textarea { width: 630px; height: 75px; }
 }
 
 .error { font-size: 14px; color: #af1010; padding: 10px 0;  }
-.hurray { font-size: 14px; color: #4A3C2C; padding: 10px 0; }
+.hurray { font-size: 14px; color: #4A3C2C; padding: 10px 0; font-style: italic; }
 
 /* ------------------------------------------------------------------- */
 

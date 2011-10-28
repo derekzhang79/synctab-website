@@ -41,5 +41,29 @@ def contact(request):
     return render(request, 'contact.html', model)
 
 def submitIssue(request):
-    model = {}
+    model = {
+        'success': False,
+        'error': False,
+        'name': "",
+        'email': "",
+        'module': "",
+        'description': ""
+    }
+
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        module = request.POST.get('module')
+        description = request.POST.get('description')
+
+        if email and description:
+            mail.send_issue_message(name, email, module, description)
+            model['success'] = True
+        else:
+            model['error'] = True
+            model['name'] = name
+            model['email'] = email
+            model['module'] = module
+            model['description'] = description
+
     return render(request, 'submitIssue.html', model)

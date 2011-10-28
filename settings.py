@@ -148,3 +148,7 @@ MAIL_SERVER = 'localhost'
 CONTACT_TO = 'synctab@khmelyuk.com'
 CONTACT_FROM = 'website@synctab.khmelyuk.com'
 CONTACT_SUBJECT = 'Contact Submission at %s'
+
+SUBMIT_ISSUE_TO = 'synctab@khmelyuk.com'
+SUBMIT_ISSUE_FROM = 'website@synctab.khmelyuk.com'
+SUBMIT_ISSUE_SUBJECT = 'Issue Submission at %s'

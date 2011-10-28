@@ -16,7 +16,7 @@
             {% csrf_token %}
 
             {% if error %}
-                <div class="error">Please check all fields have correct value.</div>
+                <div class="error">Please check all fields have correct value and required fields aren't empty.</div>
             {% endif %}
             {% if success %}
                 <div class="hurray">Thank you for submitting an issue! Your participation is very appreciated.</div>
@@ -39,7 +39,7 @@
             <div class="twoColumns">
                 <p>
                     <label for="module">Where is the Issue?</label>
-                    <select id="module">
+                    <select id="module" name="module">
                         <option value="unknown" {% ifequal module "unknown" %}selected="selected"{% endifequal %}>I don't know</option>
                         <option value="android" {% ifequal module "android" %}selected="selected"{% endifequal %}>Android Application</option>
                         <option value="chrome" {% ifequal module "chrome" %}selected="selected"{% endifequal %}>Chrome Extension</option>

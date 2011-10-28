@@ -8,9 +8,24 @@ def send_contact_message(name, email, message):
     now = datetime.datetime.now()
     subject = settings.CONTACT_SUBJECT % (now.strftime("%Y-%b-%d %H:%M:%S"))
     
-    msg = "Sender Name:\n%s\n\nEmail:\n%s\n\nContact Message:\n%s" % (name, email, message)
+    msg = ("Sender Name:\n%s\n\n" +
+           "Email:\n%s\n\n" + 
+           "Contact Message:\n%s") % (name, email, message)
+    
     return send_email(from_addr, to_addr, email, subject, msg)
 
+def send_issue_message(name, email, module, description):
+    to_addr = settings.SUBMIT_ISSUE_TO
+    from_addr = settings.SUBMIT_ISSUE_FROM
+    now = datetime.datetime.now()
+    subject = settings.SUBMIT_ISSUE_SUBJECT % (now.strftime("%Y-%b-%d %H:%M:%S"))
+
+    msg = ("Reporter Name:\n%s\n\n" +
+           "Email:\n%s\n\n" +
+           "Issue Module:\n%s\n\n" +
+           "Issue Description:\n%s") % (name, email, module, description)
+    
+    return send_email(from_addr, to_addr, email, subject, msg)
 
 def send_email(from_addr, to_addr, reply_to_addr, subject, message):
     server = None
