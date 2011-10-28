@@ -1,0 +1,43 @@
+{% extends 'main_layout.html' %}
+
+{% load static %}
+
+{% block title %}Contact SyncTab{% endblock %}
+
+{% block content %}
+    <h2>Contact</h2>
+
+    <div id="contact" class="paragraph">
+        <form id="contactForm" method="POST">
+            {% csrf_token %}
+
+            {% if error %}
+                <div class="error">Please check all fields are filled. Everything is <del>important</del> required!</div>
+            {% endif %}
+            {% if success %}
+                <div class="hurray">Thank you for contacting! We will be on touch soon.</div>
+            {% endif %}
+
+            <div class="twoColumns">
+                <p>
+                    <label for="name">Your Name &nbsp;<span>is required</span></label>
+                    <input type="text" id="name" name="name" maxlength="500" autofocus="true" placeholder="What's your name?" value="{{ name }}"/>
+                </p>
+
+                <p style="float: left; ">
+                    <label for="email">Your Email &nbsp;<span>is required</span></label>
+                    <input type="text" id="email" name="email" maxlength="500" placeholder="What's your email?" value="{{ email }}"/>
+                </p>
+
+                <div class="clear"></div>
+            </div>
+
+            <p>
+                <label for="email">Message</label>
+                <textarea id="message" name="message" rows="0" cols="0" placeholder="Hello SyncTab...">{{ message }}</textarea>
+            </p>
+            
+            <p><input type="submit" class="submitButton" value="Send"/></p>
+        </form>
+    </div>
+{% endblock %}

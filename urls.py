@@ -9,6 +9,7 @@ urlpatterns = patterns('website.views',
     url(r'^$', 'home', name='home'),
     url(r'^download/$', 'download', name='download'),
     url(r'^screenshots/$', 'screenshots', name='screenshots'),
+    url(r'^contact/$', 'contact', name='contact'),
 
 
     # Uncomment the admin/doc line below to enable admin documentation:

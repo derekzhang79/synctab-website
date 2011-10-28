@@ -164,6 +164,58 @@ ul.screenshots img:hover {
 	box-shadow: 0 0 15px #888888;
 }
 
+label { padding: 4px 0; }
+input[type=text], textarea {
+    padding: 6px 4px; border: 1px solid #BFB7A1;
+    line-height: 20px; font-size: 13px;
+    font-family: 'Droid Serif', serif, sans-serif;}
+input[type=text]:hover, textarea:hover { border: 1px solid #8C8676; }
+input[type=text]:active, textarea:active { border: 1px solid #8C8676; }
+
+#contactForm label { display: block; }
+#contactForm label span { font-size: 0.8em; font-style: italic; }
+#contactForm input[type=text] { width: 300px; }
+#contactForm textarea { width: 630px; height: 75px; }
+
+.twoColumns p { float: left; padding-right: 20px;}
+
+.submitButton {
+	margin: 10px 0;
+	cursor: pointer;
+    padding: 9px 40px;
+    box-shadow: 1px 1px 2px #aaaaaa; border: none;
+    font: 17px 'Droid Serif',serif,sans-serif;
+    line-height: 20px; color: white; text-shadow: 0 1px 1px #222222;
+    border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px;
+
+    background-image: linear-gradient(top, #59AD51, #27821F);
+    background-image: -o-linear-gradient(top, #59AD51, #27821F);
+    background-image: -moz-linear-gradient(top, #59AD51, #27821F);
+    background-image: -webkit-linear-gradient(top, #59AD51, #27821F);
+    background-image: -ms-linear-gradient(top, #59AD51, #27821F);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#59AD51', endColorstr='#27821F');
+}
+
+.submitButton:hover {
+    background-image: linear-gradient(top, #4A9143, #1B5E15);
+    background-image: -o-linear-gradient(top, #4A9143, #1B5E15);
+    background-image: -moz-linear-gradient(top, #4A9143, #1B5E15);
+    background-image: -webkit-linear-gradient(top, #4A9143, #1B5E15);
+    background-image: -ms-linear-gradient(top, #4A9143, #1B5E15);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4A9143', endColorstr='#1B5E15');
+}
+
+.submitButton:active {
+    background-image: linear-gradient(top, #1B5E15, #3D7A37);
+    background-image: -o-linear-gradient(top, #1B5E15, #3D7A37);
+    background-image: -moz-linear-gradient(top, #1B5E15, #3D7A37);
+    background-image: -webkit-linear-gradient(top, #1B5E15, #3D7A37);
+    background-image: -ms-linear-gradient(top, #1B5E15, #3D7A37);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1B5E15', endColorstr='#3D7A37');
+}
+
+.error { font-size: 14px; color: #af1010; padding: 10px 0;  }
+.hurray { font-size: 14px; color: #4A3C2C; padding: 10px 0; }
 
 /* ------------------------------------------------------------------- */
 
