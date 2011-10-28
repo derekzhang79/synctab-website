@@ -7,7 +7,11 @@
 {% block content %}
     <h2>Contact</h2>
 
-    <div id="contact" class="paragraph">
+    <div class="paragraph">
+        <p>Please, use this form to contact with author or submit your feedback.</p>
+        <p>You may also use <a href="{% url submitIssue %}">Submit Issue</a> form to let me know about any problems you're experiencing now.</p>
+        <br/>
+
         <form id="contactForm" method="POST">
             {% csrf_token %}
 
@@ -24,7 +28,7 @@
                     <input type="text" id="name" name="name" maxlength="500" autofocus="true" placeholder="What's your name?" value="{{ name }}"/>
                 </p>
 
-                <p style="float: left; ">
+                <p>
                     <label for="email">Your Email &nbsp;<span>is required</span></label>
                     <input type="text" id="email" name="email" maxlength="500" placeholder="What's your email?" value="{{ email }}"/>
                 </p>
@@ -33,7 +37,7 @@
             </div>
 
             <p>
-                <label for="email">Message</label>
+                <label for="email">Message &nbsp;<span>is required</span></label>
                 <textarea id="message" name="message" rows="0" cols="0" placeholder="Hello SyncTab...">{{ message }}</textarea>
             </p>
             

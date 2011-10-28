@@ -1,0 +1,61 @@
+{% extends 'main_layout.html' %}
+
+{% load static %}
+
+{% block title %}Submit SyncTab Issue{% endblock %}
+
+{% block content %}
+    <h2>Submit an Issue</h2>
+
+    <div class="paragraph">
+        <p>I'm very appreciated for your help to make the product better. Please, submit any issue you've found or experienced while using SyncTab.</p>
+        <p>You may also use <a href="{% url contact %}">Contact</a> form to submit your feedback as well.</p>
+        <br/>
+    
+        <form id="submitIssueForm" method="POST">
+            {% csrf_token %}
+
+            {% if error %}
+                <div class="error">Please check all fields have correct value.</div>
+            {% endif %}
+            {% if success %}
+                <div class="hurray">Thank you for submitting an issue! Your participation is very appreciated.</div>
+            {% endif %}
+
+            <div class="twoColumns">
+                <p>
+                    <label for="name">What's Your Name?</label>
+                    <input type="text" id="name" name="name" maxlength="500" autofocus="true" placeholder="We'll need your name to send you an update" value="{{ name }}"/>
+                </p>
+
+                <p>
+                    <label for="email">What's Your Email? &nbsp;<span>is required</span></label>
+                    <input type="text" id="email" name="email" maxlength="500" placeholder="We'll need your email to send you an update" value="{{ email }}"/>
+                </p>
+
+                <div class="clear"></div>
+            </div>
+
+            <div class="twoColumns">
+                <p>
+                    <label for="module">Where is the Issue?</label>
+                    <select id="module">
+                        <option value="unknown" {% ifequal module "unknown" %}selected="selected"{% endifequal %}>I don't know</option>
+                        <option value="android" {% ifequal module "android" %}selected="selected"{% endifequal %}>Android Application</option>
+                        <option value="chrome" {% ifequal module "chrome" %}selected="selected"{% endifequal %}>Chrome Extension</option>
+                        <option value="everywhere" {% ifequal module "everywhere" %}selected="selected"{% endifequal %}>Everywhere</option>
+                    </select>
+                </p>
+
+                <div class="clear"></div>
+            </div>
+
+            <p>
+                <label for="description">What's the Issue? &nbsp;<span>is required</span></label>
+                <textarea id="description" name="description" rows="0" cols="0" placeholder="Steps to Reproduce, Expected Result, Wrong Result...">{{ message }}</textarea>
+            </p>
+            
+            <p><input type="submit" class="submitButton" value="Submit"/></p>
+        </form>
+    </div>
+{% endblock %}

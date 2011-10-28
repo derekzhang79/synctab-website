@@ -45,7 +45,7 @@
               <a href="{% url download %}">Download</a>
               <a href="help.html">Help</a>
               <a href="{% url contact %}">Contact</a>
-              <a href="submitIssue.html">Submit Issue</a>
+              <a href="{% url submitIssue %}">Submit Issue</a>
             </div>
 
             {% block content %}{% endblock %}
@@ -64,7 +64,7 @@
               <li><a href="{% url screenshots %}">Screenshots</a></li>
               <li><a href="help.html">Help</a></li>
               <li><a href="{% url contact %}">Contact</a></li>
-              <li><a href="submitIssue.html">Submit Issue</a></li>
+              <li><a href="{% url submitIssue %}">Submit Issue</a></li>
             </ul>
           </div>
           <div class="footerSection">

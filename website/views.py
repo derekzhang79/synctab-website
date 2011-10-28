@@ -40,3 +40,6 @@ def contact(request):
 
     return render(request, 'contact.html', model)
 
+def submitIssue(request):
+    model = {}
+    return render(request, 'submitIssue.html', model)

@@ -172,10 +172,18 @@ input[type=text], textarea {
 input[type=text]:hover, textarea:hover { border: 1px solid #8C8676; }
 input[type=text]:active, textarea:active { border: 1px solid #8C8676; }
 
-#contactForm label { display: block; }
-#contactForm label span { font-size: 0.8em; font-style: italic; }
-#contactForm input[type=text] { width: 300px; }
-#contactForm textarea { width: 630px; height: 75px; }
+select {
+    padding: 6px 4px; 
+    line-height: 20px; font-size: 13px;
+    font-family: 'Droid Serif', serif, sans-serif;}
+
+form label { display: block; }
+form label span { font-size: 0.8em; font-style: italic; line-height: 15px; }
+form input[type=text] { width: 300px; }
+form select { width: 310px; height: 34px; }
+form textarea { width: 630px; height: 75px; }
+
+#submitIssueForm textarea { height: 175px; }
 
 .twoColumns p { float: left; padding-right: 20px;}
 
