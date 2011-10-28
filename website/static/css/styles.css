@@ -1,0 +1,199 @@
+* { margin: 0; padding: 0; }
+
+html, body { height: auto; }
+
+body {
+	font: 16px 'Droid Serif', serif;
+	text-shadow: 1px 0 1px #ffffff;
+	color: #2a2a2a;
+}
+
+a { color: #073594; text-decoration: none; }
+a:hover { color: #073594; text-decoration: underline; }
+
+h1, h2, h3, h4 { font-family: 'Yanone Kaffeesatz', sans-serif; font-weight: normal; padding: 10px 0 7px 0;  }
+#content h3 { padding-left: 10px; }
+.top { height: 20px; width: 100%; background: url(../image/top_shadow.png) repeat-x; }
+.bottom { height: 20px; width: 100%; background: url(../image/bottom_shadow.png) repeat-x; }
+#content .bottom { height: 50px; width: 100%; background: url(../image/bottom_light.png) repeat-x; }
+
+p { padding: 5px 0;}
+
+.clear { clear: both; }
+
+#header { background: url('../image/header_bg.png');}
+#content { background: url('../image/content_bg.png'); }
+#footer { background: url('../image/footer_bg.png'); }
+#header .wrapper , #content .wrapper , #footer .wrapper  { 
+	width: 750px;  
+	margin: 0 auto;  
+	padding: 15px; 
+	height: auto; 
+}
+
+#header .wrapper { text-align: center; background: url(../image/light.png) center top no-repeat;}
+#header h1 { font-size: 82px; color: #454545;}
+#header #subtitle { 
+	font-size: 1.15em; color: #545454; 
+	font-style:italic;
+}
+
+#content .wrapper { height: auto; background: url(../image/content_light.png) center top no-repeat; }
+
+#content ul { padding: 10px 0 10px 40px; }
+#content ul li { padding: 4px 0;}
+
+ul#facts { font-size: 1.2em; color: #434343; line-height: 26px; padding: 10px 0 15px 15px; }
+
+.paragraph { padding: 5px 0 5px 10px; line-height: 20px; font-size: 14px;}
+.paragraph ul { font-style: italic; }
+.paragraph .notice { 
+	float: left; width: 200px; background: #ffffff; 
+	border: 1px solid #cfcfcf; 
+	border-radius: 8px; -webkit-border-radius: 8px; -moz-border-radius: 8px;
+	margin: 0 0 0 10px; padding: 15px;
+	color: #555555; font-style: italic;
+	font-size: 16px; line-height: 24px;
+	text-align: center;
+	text-shadow: none;
+}
+.paragraph .sideImage {  float: left; margin: 0 0 0 10px; padding: 5px; width: 200px; text-align: center; }
+.paragraph .sideImage img { box-shadow: 1px 1px 20px #999999; border: none; }
+
+.paragraph .main { float: left; width: 440px; margin-left: 40px;}
+.emphasize { 
+	font-family: 'Lobster Two', cursive;
+	display: block; margin: 20px 30px 20px 10px; 
+	text-align: center; line-height: 30px;
+	font-size: 1.65em; font-style: italic;
+}
+
+.point { 
+	font-family: 'Lobster Two', cursive;
+	display: block; margin: 20px 30px; 
+	text-align: center; line-height: 30px;
+	font-size: 1.4em; font-style: italic;
+}
+
+.getSyncTabDownloads { float: left; }
+.getSyncTabDownloads .item { float: left; padding: 0 40px; font-size: 14px; }
+.getSyncTabLinks { float: right; width: 300px;}
+.getSyncTabHelp { float: right; }
+.getSyncTabHelp ul { font-size: 14px; }
+
+#footer .wrapper { height: auto; font-size: 13px; padding: 5px 0 20px 0; color: #111111; text-shadow: none;}
+#footer .footerSection { float: left; width: 250px; padding: 0 0 20px 0; line-height: 22px;}
+#footer a { color: #333333; text-shadow: none; }
+
+#footer .footerSection ul { list-style: none; }
+
+.download { 
+	padding: 15px 0 0;
+	float: right;
+	font-size: 12px;
+	text-align: center;
+	font-style: italic;
+	color: #4f4f4f;
+}
+.downloadButton {
+	display:block;
+	width:200px;
+	height:75px;
+	padding-bottom: 5px;
+	text-indent:-9999px;
+}
+.downloadButton a {
+	display:block;
+	width:200px;
+	height:75px;
+	background:transparent url(../image/download.png) no-repeat top left;
+	outline:none;
+}
+.downloadButton a:hover {
+	background-position:0 -75px;
+}
+.downloadButton a:active {
+	background-position:0 -150px;
+}
+
+#menu { top: -25px; position: relative; padding: 0 0 5px 0;}
+
+#menu a {
+	box-shadow: 0 0 20px #ffffff;
+
+	font-size: 15px;
+	margin: 10px 2px;
+	padding: 5px 10px;
+
+	background: #A18565;
+	color: #ffffff;
+	text-shadow: 1px 1px 0 #444444;
+	border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px;
+
+	text-decoration: none;
+
+
+	border-left: 1px solid transparent;
+	border-top: 1px solid transparent;
+	border-right: 1px solid #856B4E;
+	border-bottom: 1px solid #856B4E;
+}
+
+#menu a:hover {
+	text-decoration: none;
+	background: #786249;
+	border-right: 1px solid #594937;
+	border-bottom: 1px solid #594937;
+	border-top: 1px solid #967C5F;
+}
+
+
+.downloadOption { font-size: 17px; margin: 15px 0 30px 0; }
+
+ul.screenshots { list-style: none; padding: 10px 0 10px 20px !important;}
+ul.screenshots li { display: inline;}
+ul.screenshots img { 
+	margin: 5px 10px 5px 0; 
+	padding: 7px;
+	background: #ffffff; 
+	border: 1px solid #efefef; 
+	box-shadow: 0 0 15px #cfcfcf;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+}
+ul.screenshots img:hover {
+	box-shadow: 0 0 15px #888888;
+}
+
+
+/* ------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Droid Serif'), local('DroidSerif'), url('../font/DroidSerif.woff') format('woff');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: italic;
+  font-weight: normal;
+  src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url('../font/DroidSerifItalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Yanone Kaffeesatz Bold'), local('YanoneKaffeesatz-Bold'), url('../font/YanoneKaffeesatzBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Yanone Kaffeesatz Regular'), local('YanoneKaffeesatz-Regular'), url('../font/YanoneKaffeesatzRegular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lobster Two';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lobster Two Italic'), local('LobsterTwo-Italic'), url('../font/LobsterTwoItalic.woff') format('woff');
+}

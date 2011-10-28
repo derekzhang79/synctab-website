@@ -4,10 +4,12 @@ from django.conf.urls.defaults import patterns, include, url
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = patterns('website.views',
     # Examples:
-    # url(r'^$', 'synctab.views.home', name='home'),
-    # url(r'^synctab/', include('synctab.foo.urls')),
+    url(r'^$', 'home', name='home'),
+    url(r'^download/$', 'download', name='download'),
+    url(r'^screenshots/$', 'screenshots', name='screenshots'),
+
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

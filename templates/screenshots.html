@@ -1,0 +1,59 @@
+{% extends 'main_layout.html' %}
+
+{% load static %}
+
+{% block title %}SyncTab Screenshots{% endblock %}
+
+{% block head %}
+    <link type="text/css" rel="stylesheet" href="{% get_static_prefix %}css/jquery.fancybox.css"/>
+
+    <script type="text/javascript" src="{% get_static_prefix %}js/jquery.min.js"></script>
+    <script type="text/javascript" src="{% get_static_prefix %}js/jquery.fancybox.pack.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.screenshots li a').fancybox({
+                type: 'image',
+                centerOnScroll: true,
+                titlePosition: 'inside',
+                transitionIn: 'elastic',
+                speedIn: 600,
+                speedOut: 200,
+                overlayShow: true
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+
+    <h1>Screenshots</h1>
+
+    <h2 id="android">Android Application</h2>
+
+    <ul class="screenshots">
+        <li><a href="{% get_static_prefix %}screenshots/synctab-android-login.png" rel="screenshot" title="Login"><img
+                src="{% get_static_prefix %}screenshots/synctab-android-login-small.png" alt="Login"/></a></li>
+        <li><a href="{% get_static_prefix %}screenshots/synctab-android-register.png" rel="screenshot" title="Register"><img
+                src="{% get_static_prefix %}screenshots/synctab-android-register-small.png" alt="Register"/></a></li>
+        <li><a href="{% get_static_prefix %}screenshots/synctab-android-list.png" rel="screenshot" title="Home"><img
+                src="{% get_static_prefix %}screenshots/synctab-android-list-small.png" alt="List"/></a></li>
+        <li><a href="{% get_static_prefix %}screenshots/synctab-android-shared.png" rel="screenshot" title="Share a Tab"><img
+                src="{% get_static_prefix %}screenshots/synctab-android-shared-small.png" alt="Share"/></a></li>
+        <li><a href="{% get_static_prefix %}screenshots/synctab-android-share-via.png" rel="screenshot" title="Share Via"><img
+                src="{% get_static_prefix %}screenshots/synctab-android-share-via-small.png" alt="Share Via"/></a></li>
+    </ul>
+
+
+    <h2 id="chrome">Chrome Extension</h2>
+
+    <ul class="screenshots">
+        <li><a href="{% get_static_prefix %}screenshots/synctab-chrome-login.jpg" rel="screenshot" title="Login Page"><img
+                src="{% get_static_prefix %}screenshots/synctab-chrome-login-small.png" alt="Login"/></a></li>
+        <li><a href="{% get_static_prefix %}screenshots/synctab-chrome-register.jpg" rel="screenshot" title="Register Page"><img
+                src="{% get_static_prefix %}screenshots/synctab-chrome-register-small.png" alt="Register"/></a></li>
+        <li><a href="{% get_static_prefix %}screenshots/synctab-chrome-options.jpg" rel="screenshot" title="SyncTab Options"><img
+                src="{% get_static_prefix %}screenshots/synctab-chrome-options-small.png" alt="Options"/></a></li>
+    </ul>
+
+{% endblock %}

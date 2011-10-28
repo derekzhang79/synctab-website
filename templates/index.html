@@ -1,0 +1,130 @@
+{% extends 'main_layout.html' %}
+
+{% load static %}
+
+{% block title %}SyncTab: send links from phone to your browser{% endblock %}
+
+{% block content %}
+    <div class="download">
+        <div class="downloadButton">
+            <a href="{% url download %}">Download</a>
+        </div>
+        current version is 1.0b
+    </div>
+
+    <p class="emphasize">SyncTab is a simple way to send your links from Android to your favourite desktop browser</p>
+
+    <div class="clear"></div>
+
+    <h2>Seriously What Is a SyncTab?</h2>
+    <div class="paragraph">
+        <strong>SyncTab</strong> is a free Android application and browser plugin.
+        With SyncTab Android application you can send your interesting website directly to your web browser.
+        In a minute it will be opened in your browser as a new tab and you can continue work with it!
+    </div>
+    <div class="paragraph">
+        <div class="sideImage">
+            <img src="{% get_static_prefix %}image/screen_tabs.png" alt="Screenshot" width="180px"/>
+        </div>
+        <div class="main">
+            <ul id="facts">
+                <li>Absolutely Free</li>
+                <li>Works on most of Android phones</li>
+                <li>Works with Google Chrome</li>
+                <li>You can get the entire list of shared links when you need</li>
+            </ul>
+            <a href="{% url screenshots %}">More Screenshots
+                <small>&gt;&gt;</small>
+            </a>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <h2>Why to use a SyncTab?</h2>
+    <div class="paragraph">
+        <p>Maybe, as most of us, you already do most of web surfing using your smartphone.
+            It's so comfortable to open the mobile browser app and start surfing the web in a few seconds. No matter
+            where you are, your phone is with you! You can easily read the latest news, find useful or fun websites
+            and, simply, do whatever you want.</p>
+
+        <p>But smartphones and mobile browsers
+            still have <a href="#mobile-web-drawbacks">numerous drawbacks</a> which limit you.
+            And than the only you want is to have either larger display or ...</p>
+
+        <p>Or you may start using some of the many bookmarking services, but <a href="#bookmarks">there is something
+            wrong with it</a>.</p>
+
+        <p>And here you came to idea, that what's you need is simple a tool to share you mobile browser tabs with
+            desktop browser. Thus, <i>you have no choice to lost or forget tabs anymore!</i>
+
+    </div>
+
+    <h3 id="mobile-web-drawbacks">What's wrong with mobile web surfing?</h3>
+    <div class="paragraph">
+        <div class="sideImage">
+            <img src="{% get_static_prefix %}image/bad_browsing.png" alt="Bad browsing" width="180px"/>
+        </div>
+        <div class="main">
+            There are a lot of problems when you're browsing web from your phone:
+            <ul>
+                <li>website layout is broken and it's hard to read the content</li>
+                <li>you want to watch video, but your mobile browser doesn't support flash yet</li>
+                <li>you just want to continue browsing website from your laptop later</li>
+                <li>you don't have a time to read a story now, but want to do it tomorrow</li>
+                <li>you're limited to mobile platform constraints, like small display and keyboard, defective browsers
+                    etc.
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <h3 id="bookmarks">What about bookmarks?</h3>
+    <div class="paragraph">
+        <div class="notice">
+            Bookmarks are a good way to make your <br/>conscience silent
+            <br/>while you're forgetting all that interesting websites
+        </div>
+        <div class="main">
+            There are so many tools that want to help you to remember your bookmarks.
+            Bookmarks support is even built into your favourite web browser.
+            But as soon as you get a critical mass of bookmarks, you sudenly stop using them.
+            <p class="point">SyncTab opens shared links as a new tab in your browser.
+                Thus, you can be sure you'll have the interesting web page with you,
+                till the moment you'll read or close it.</p>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <h2>How to Get SyncTab? </h2>
+    <div class="paragraph">
+        You can download Android Application and Chrome Extension for free. You will need to install both Android
+        Application to send links from your mobile and Chrome Extension to receieve and open tabs in desktop browser.
+    </div>
+    <div>
+        <div class="getSyncTabDownloads">
+            <h3>Downloads</h3>
+
+            <div class="item">
+                <a href="{% url download %}#android"><img src="{% get_static_prefix %}image/android.png" alt="Android app"></a>
+
+                <p><a href="{% url download %}#android">Android Application</a></p>
+            </div>
+            <div class="item">
+                <a href="{% url download %}#chrome"><img src="{% get_static_prefix %}image/chrome.png" alt="Chrome extension"></a>
+
+                <p><a href="{% url download %}#chrome">Chrome Extension</a></p>
+            </div>
+        </div>
+        <div class="getSyncTabHelp">
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="help/getting-started.html">Getting Started</a></li>
+                <li><a href="help/chrome-extension-options">How to Install on Android</a></li>
+                <li><a href="help/chrome-extension-options">How to Install Chrome Extensition</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+    </div>
+{% endblock %}
