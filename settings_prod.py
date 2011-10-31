@@ -57,7 +57,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = '/home/ubuntu/synctab/website/static/'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -84,7 +84,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 're^i_(cyfvurj(6hlvs7wmx3vmokt_+2v4hr-qqak9^x%#p3xb'
+SECRET_KEY = 're^i_(ckKsdPa.*1,28s;dk6hlvs7wmx3vmokt_+2v4hr-qqak9^x%#p3xb'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -103,7 +103,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'synctab.urls'
 
-TEMPLATE_DIRS = ('/home/ruslan/projects/synctab/synctab/templates',)
+TEMPLATE_DIRS = ('/home/ubuntu/projects/synctab/templates/')
 
 INSTALLED_APPS = (
     'django.contrib.auth',
