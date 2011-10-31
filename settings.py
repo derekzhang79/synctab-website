@@ -1,7 +1,7 @@
 
 import os
 
-if os.environ['DEVELOPMENT']:
+if os.environ.get('DEVELOPMENT'):
     from settings_dev import *
 else:
     from settings_prod import *
