@@ -1,3 +1,37 @@
+
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Droid Serif'), local('DroidSerif'), url('../font/DroidSerif.woff') format('woff');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: italic;
+  font-weight: normal;
+  src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url('../font/DroidSerifItalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Yanone Kaffeesatz Bold'), local('YanoneKaffeesatz-Bold'), url('../font/YanoneKaffeesatzBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Yanone Kaffeesatz Regular'), local('YanoneKaffeesatz-Regular'), url('../font/YanoneKaffeesatzRegular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lobster Two';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lobster Two Italic'), local('LobsterTwo-Italic'), url('../font/LobsterTwoItalic.woff') format('woff');
+}
+
+/* ------------------------------------------------------------------------ */
+
 * { margin: 0; padding: 0; }
 
 html, body { height: auto; }
@@ -224,36 +258,3 @@ form textarea { width: 630px; height: 75px; }
 
 .error { font-size: 14px; color: #af1010; padding: 10px 0;  }
 .hurray { font-size: 14px; color: #4A3C2C; padding: 10px 0; font-style: italic; }
-
-/* ------------------------------------------------------------------- */
-
-@font-face {
-  font-family: 'Droid Serif';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Droid Serif'), local('DroidSerif'), url('../font/DroidSerif.woff') format('woff');
-}
-@font-face {
-  font-family: 'Droid Serif';
-  font-style: italic;
-  font-weight: normal;
-  src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url('../font/DroidSerifItalic.woff') format('woff');
-}
-@font-face {
-  font-family: 'Yanone Kaffeesatz';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Yanone Kaffeesatz Bold'), local('YanoneKaffeesatz-Bold'), url('../font/YanoneKaffeesatzBold.woff') format('woff');
-}
-@font-face {
-  font-family: 'Yanone Kaffeesatz';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Yanone Kaffeesatz Regular'), local('YanoneKaffeesatz-Regular'), url('../font/YanoneKaffeesatzRegular.woff') format('woff');
-}
-@font-face {
-  font-family: 'Lobster Two';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lobster Two Italic'), local('LobsterTwo-Italic'), url('../font/LobsterTwoItalic.woff') format('woff');
-}
