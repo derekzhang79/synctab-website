@@ -37,7 +37,7 @@ def send_email(from_addr, to_addr, reply_to_addr, subject, message):
         
         msg += message
 
-        server = smtplib.SMTP(settings.MAIL_SERVER)
+        server = smtplib.SMTP(settings.EMAIL_HOST)
         server.sendmail(from_addr, to_addr, msg)
 
         return True
