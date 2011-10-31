@@ -93,6 +93,16 @@ TEMPLATE_LOADERS = (
 #     'django.template.loaders.eggs.Loader',
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.contrib.messages.context_processors.messages',
+    'synctab.website.context_processors.global_vars',
+)
+
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -151,3 +161,5 @@ CONTACT_SUBJECT = '[dev] Contact Submission at %s'
 SUBMIT_ISSUE_TO = 'synctab@khmelyuk.com'
 SUBMIT_ISSUE_FROM = 'website@synctab.khmelyuk.com'
 SUBMIT_ISSUE_SUBJECT = '[dev] Issue Submission at %s'
+
+GA_CODE = None

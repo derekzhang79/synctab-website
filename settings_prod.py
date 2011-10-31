@@ -151,3 +151,5 @@ CONTACT_SUBJECT = 'Contact Submission at %s'
 SUBMIT_ISSUE_TO = 'synctab@khmelyuk.com'
 SUBMIT_ISSUE_FROM = 'website@synctab.khmelyuk.com'
 SUBMIT_ISSUE_SUBJECT = 'Issue Submission at %s'
+
+GA_CODE = 'UA-4438157-6'

@@ -7,16 +7,15 @@
     <meta name="Keywords" content="android, browser, chrome, firefox, synctab, tab, links, bookmarks, synchronize, share, download" />
     <meta name="Description" content="SyncTab is an Android application that sends the links to your desktop or laptop browser directly." />
     <meta name="Author" content="Ruslan Khmelyuk" />
-    
+
     <link rel="shortcut icon" href="{% get_static_prefix %}image/favicon.png" type="image/png" />
     <link type="text/css" rel="stylesheet" href="{% get_static_prefix %}css/styles.css"/>
-
     {% block head %}{% endblock %}
 
-    <!--
+    {% if GA_CODE %}
     <script type="text/javascript">
       var _gaq = _gaq || [];
-      _gaq.push(["_setAccount", "UA-4438157-5"]);
+      _gaq.push(["_setAccount", "{{ GA_CODE }}"]);
       _gaq.push(["_trackPageview"]);
 
       (function() {
@@ -24,9 +23,10 @@
         ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
         var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
       })();
-     </script>
-     -->
-    </head>
+    </script>
+    {% endif %}
+  
+   </head>
   <body>
       <div id="header">
         <div class="wrapper">
