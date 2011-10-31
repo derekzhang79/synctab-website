@@ -67,3 +67,6 @@ def submitIssue(request):
             model['description'] = description
 
     return render(request, 'submitIssue.html', model)
+
+def help(request):
+    return render(request, 'help.html')
