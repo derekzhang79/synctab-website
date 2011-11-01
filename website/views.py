@@ -29,6 +29,7 @@ def contact(request):
         email = request.POST.get('email')
         message = request.POST.get('message')
 
+        # name, email and message are required
         if name and email and message:
             mail.send_contact_message(name, email, message)
             model['success'] = True
@@ -56,6 +57,7 @@ def submitIssue(request):
         module = request.POST.get('module')
         description = request.POST.get('description')
 
+        # only mail and description are required
         if email and description:
             mail.send_issue_message(name, email, module, description)
             model['success'] = True
