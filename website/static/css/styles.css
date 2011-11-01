@@ -95,7 +95,7 @@ ul#facts { font-size: 1.2em; color: #434343; line-height: 26px; padding: 10px 0 
 .paragraph .sideImage img { box-shadow: 1px 1px 20px #999999; border: none; }
 
 .docImage { margin: 10px 5px; text-align: center;}
-.docImage img { box-shadow: 1px 1px 20px #999999; border: none; margin:5px;}
+.docImage img { box-shadow: 1px 1px 20px #777777; border: none; margin:5px;}
 .docImage img.noShadow { box-shadow: none;}
 .docImage .label { font-style: italic; font-size: 0.9em;}
 

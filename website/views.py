@@ -72,4 +72,7 @@ def help(request):
     return render(request, 'help.html')
 
 def getting_started(request):
-    return render(request, 'getting-started.html')
+    return render(request, 'getting_started.html')
+
+def how_to_use_android_app(request):
+    return render(request, 'how_to_use_android_app.html')
