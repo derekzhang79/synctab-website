@@ -70,3 +70,6 @@ def submitIssue(request):
 
 def help(request):
     return render(request, 'help.html')
+
+def getting_started(request):
+    return render(request, 'getting-started.html')

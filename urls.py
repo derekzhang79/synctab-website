@@ -12,6 +12,7 @@ urlpatterns = patterns('website.views',
     url(r'^contact/$', 'contact', name='contact'),
     url(r'^submit-issue/$', 'submitIssue', name='submitIssue'),
     url(r'^help/$', 'help', name='help'),
+    url(r'^help/getting-started$', 'getting_started', name='getting_started'),
 
 
     # Uncomment the admin/doc line below to enable admin documentation:
