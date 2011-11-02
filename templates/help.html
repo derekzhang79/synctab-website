@@ -7,13 +7,26 @@
 {% block content %}
     <h1>Help</h1>
 
-    <div class="paragraph" style="height: 250px;">
-
+    <h2>Start with...</h2>
+    <div class="paragraph">
         <ul>
             <li><a href="{% url getting_started %}">Getting Started</a></li>
             <li><a href="{% url how_to_use_android_app %}">How to Use Android Application</a></li>
-            <li><a href="#">How to Use Chrome Application</a></li>
+            <li><a href="{% url how_to_use_chrome_ext %}">How to Use Chrome Application</a></li>
         </ul>
+    </div>
 
+    <h2>How To...</h2>
+    <div class="paragraph" style="min-height: 200px;">
+        <ul class="horizontal">
+            <li><a href="{% url how_to_use_android_app %}#share-link">Share a Link</a></li>
+            <li><a href="{% url how_to_use_android_app %}#view-shared-links">View a List of Shared Links</a></li>
+            <li><a href="{% url how_to_use_android_app %}#reshare-link">Reshare a Link</a></li>
+            <li><a href="{% url how_to_use_android_app %}#remove-link">Remove a Link</a></li>
+            <li><a href="{% url how_to_use_android_app %}#share-via">Send a Link</a></li>
+            <li><a href="{% url how_to_use_android_app %}#copy-link">Copy Link into Clipboard</a></li>
+            <li><a href="{% url how_to_use_chrome_ext %}#notifications">Disable Notifications when Received Link</a></li>
+            <li><a href="{% url how_to_use_chrome_ext %}#bookmarks">Add Received Link to Bookmarks</a></li>
+        </ul>
     </div>
 {% endblock %}

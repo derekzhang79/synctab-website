@@ -78,3 +78,6 @@ def getting_started(request):
 
 def how_to_use_android_app(request):
     return render(request, 'how_to_use_android_app.html')
+
+def how_to_use_chrome_ext(request):
+    return render(request, 'how_to_use_chrome_ext.html')
