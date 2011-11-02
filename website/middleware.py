@@ -3,15 +3,15 @@ import re
 
 class MobileWebsiteMiddleware(object):
 
-    PATTERN = '(iphone|windows ce|mobile|phone|symbian|mini|pda|ipod|mobi|blackberry|playbook|vodafone|kindle)'
+    MOBI_REG = re.compile('(iphone|windows ce|mobile|phone|symbian|mini|pda' +
+                          '|ipod|mobi|blackberry|playbook|vodafone|kindle)',
+                          re.IGNORECASE)
 
     def process_request(self, request):
 
         if request.META.has_key('HTTP_USER_AGENT'):
             userAgent = request.META.get('HTTP_USER_AGENT')
-
-            reg = re.compile(self.PATTERN, re.IGNORECASE)
-            match = reg.search(userAgent)
+            match = self.MOBI_REG.search(userAgent)
 
             if match:
                 # mobile browser, check if need to redirect
