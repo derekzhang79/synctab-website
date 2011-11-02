@@ -23,5 +23,4 @@ class MobileWebsiteMiddleware(object):
                     # need to redirect to normal version
                     return HttpResponseRedirect(path[2:])
 
-
         return None
