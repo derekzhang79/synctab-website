@@ -29,3 +29,6 @@ ul.screenshots img:hover { box-shadow: 0 0 15px #888888; }
 }
 
 em { font-family: serif !important; font-style: italic; }
+
+.error { font-weight: bold; color: #af1010; padding: 10px 0;  }
+.hurray { font-weight: bold; color: #27821F; padding: 10px 0; }
