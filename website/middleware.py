@@ -3,7 +3,7 @@ import re
 
 class MobileWebsiteMiddleware(object):
 
-    PATTERN = '(android|iphone|windows ce|mobile|phone|symbian|mini|pda|ipod|mobi|blackberry|playbook|vodafone|kindle)'
+    PATTERN = '(iphone|windows ce|mobile|phone|symbian|mini|pda|ipod|mobi|blackberry|playbook|vodafone|kindle)'
 
     def process_request(self, request):
 
