@@ -1,0 +1,123 @@
+{% extends 'mobile/main_layout.html' %}
+
+{% load static %}
+
+{% block title %}Getting Started with SyncTab{% endblock %}
+
+{% block header %}
+    <h1>Getting Started</h1>
+    <a href="javascript:void(0);" data-rel="back" data-icon="back">Back</a>
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        This page is to help you to start using SyncTab to share a links from Android phone to your desktop browser.
+
+        First you will need to install Android application and then install Chrome extension.
+        You will need to register an account if you don't have yet a SyncTab account.
+        This account should be used to login into SyncTab Android application and Chrome extension.
+    </p>
+
+    <div data-role="collapsible-set">
+        <div data-role="collapsible">
+            <h2 id="install-android">Install Android Application</h2>
+
+            <p>Download and install Android application on <a href="{% url download %}">Download</a> page.</p>
+            After install you will find a new application on your Android phone called SyncTab. SyncTab icon looks like on
+            image:
+            <div class="docImage">
+                <img src="{% get_static_prefix %}image/docs/synctab-launcher.png" alt="Launcher Icon"/>
+            </div>
+
+            You'll see a <em>Login</em> screen when you open SyncTab application for first time. If you're already
+            registered,
+            then enter your <em>Email</em>, <em>Password</em> and click on <em>Login</em> button.
+            <div class="docImage">
+                <img src="{% get_static_prefix %}image/docs/login-screen.png" alt="Login Screen" height="180"/>
+
+                <div class="label">Login Screen</div>
+            </div>
+
+            Otherwise click on the <em>Register</em> button and use <em>Registration</em> screen to create a new account.
+            Enter your real email and a secure password. SyncTab doesn't restrict you on password size or complexity. It's
+            on your own!
+            <div class="docImage">
+                <img src="{% get_static_prefix %}image/docs/register-screen.png" alt="Register Screen" height="180"/>
+                <div class="label">Registration Screen</div>
+            </div>
+
+            After successful login/registration, you will be redirected to the <em>Home</em> screen with empty list with
+            your shared tabs.
+            Of course, this will be an empty list on the begin.
+            <div class="docImage">
+                <img src="{% get_static_prefix %}image/docs/empty-list.png" alt="Home Screen: empty list" height="180"/>
+                <div class="label">Empty List</div>
+            </div>
+
+            <div class="docImage">
+                <img src="{% get_static_prefix %}image/docs/home-screen.png" alt="Home Screen" height="180"/>
+                <div class="label">List with Shared Links</div>
+            </div>
+
+            Now you may close SyncTab application and continue to install Chrome Extension.
+
+        </div>
+
+        <div data-role="collapsible">
+            <h2 id="install-chrome">Install Chrome Extension</h2>
+            <p>Download and install Chrome Extension from <a href="{% url download %}">Download</a> page.</p>
+            After you install Chrome extension, a new tab will be opened in your browser.
+            This tab contains a page with login form. User your SyncTab account email and password
+            (as you have already registered when installed Android application, use the same email and password) to login.
+            If you don't have a SyncTab account yet, you may register it by clicking on <em>Register Now</em> link.
+            <div class="docImage">
+                <img src="{% get_static_prefix %}image/docs/synctab-chrome-login.jpg" alt="Chrome Extension: login page" height="180"/>
+                <div class="label">Login Form</div>
+            </div>
+
+            After success login, you may close this page.
+
+            <p>Now your browser will be opening a shared links as a new tabs!</p>
+
+            <p>You can read more about <a href="{% url how_to_use_chrome_ext %}">how to use Chrome extension</a>.</p>
+        </div>
+
+        <div data-role="collapsible">
+            <h2>Share a Link</h2>
+            <p>Here I describe how to share a link from Android phone to your desktop browser, like Chrome.
+            Android platform allows you to send a content to different application. This content can be a link, a text or image.
+            SyncTab supports only processing a links. This means, you can use numerous Android applications (like Browser, Google Reader and so on)
+            to send a link to SyncTab application. SyncTab application will do it best to open this link in your desktop browser.</p>
+
+            <p>There are a few ways to find such <em>Send to</em> action.
+            It may be available to you from Menu by "Share", "Share via", "Share page",
+            "Send" or "Send To" labels. You may also find it by it's standard icon, that looks like this:</p>
+            <div class="docImage">
+                <img src="{% get_static_prefix %}image/docs/share.png" alt="Send To Icon" class="noShadow"/>
+            </div>
+
+            <p>Lets try to share a link from Android browser. Start a browser application on your phone and open some page with it,
+                e.g. <a href="http://google.com">http://google.com</a>. Click on Menu and search for "Share page" option.
+                After you select it, you will see a "Share via" dialog with a list of applications you want to share with.
+                Find and select a SyncTab option here. </p>
+
+            <div class="docImage">
+                <img src="{% get_static_prefix %}image/docs/share-via.png" alt="Share Via" height="180"/>
+                <div class="label">Share via SyncTab</div>
+            </div>
+
+            <p>After you select a SyncTab option, you will see a new screen from SyncTab application.
+                Here you will see a message that a tab is syncing. Wait for a few seconds.
+                If you have an Internet connection up, you will see a next message:</p>
+
+            <div class="docImage">
+                <img src="{% get_static_prefix %}image/docs/link-shared.png" alt="Shared Link" height="180"/>
+                <div class="label">Shared Link</div>
+            </div>
+
+            <p>And now, less than in a minute, your desktop browser will open a new tab with the shared link!</p>
+        </div>
+    </div>
+
+{% endblock %}

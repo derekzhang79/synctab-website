@@ -1,0 +1,82 @@
+{% extends 'mobile/main_layout.html' %}
+
+{% load static %}
+
+{% block title %}How To Use Android Application{% endblock %}
+
+{% block header %}
+    <h1>Android Application</h1>
+    <a href="javascript:void(0);" data-rel="back" data-icon="back">Back</a>
+{% endblock %}
+
+{% block content %}
+
+    <div data-role="collapsible-set">
+        <div data-role="collapsible">
+            <h2 id="share-link">Share a Link</h2>
+            <p>Lets try to share a link from Android browser. Start a browser application on your phone and open some page in it,
+                e.g. <a href="http://google.com">http://google.com</a>. Click on Menu and search for "Share page" option.
+                After you select it, you will see a "Share via" dialog with a list of applications you want to share with.
+                Find and select a SyncTab option here. </p>
+
+            <div class="docImage">
+                <img src="{% get_static_prefix %}image/docs/share-via.png" alt="Share Via" height="180"/>
+                <div class="label">Share via SyncTab</div>
+            </div>
+
+            <p>After you select a SyncTab option, you will see a new screen from SyncTab application.
+                Here you will see a message that a tab is syncing. Wait for a few seconds.
+                If you have an Internet connection up, you will see a next message:</p>
+
+            <div class="docImage">
+                <img src="{% get_static_prefix %}image/docs/link-shared.png" alt="Shared Link" height="180"/>
+                <div class="label">Shared Link</div>
+            </div>
+
+            <p>Now the link is shared. And as soon as you'll have a connection to the internet, it will be available in your desktop browser.</p>
+        </div>
+
+        <div data-role="collapsible">
+            <h2 id="view-shared-links">View List of Shared Links</h2>
+            <p>Start SyncTab application. Login if need. You should be on Home page now. Home page contains a list of already shared links.
+                When you connected to the internet, you may load the entire list of shared links.</p>
+
+            <div class="docImage">
+                <img src="{% get_static_prefix %}image/docs/home-screen.png" alt="Home Screen" height="180"/>
+                <div class="label">List of Shared Links</div>
+            </div>
+        </div>
+
+        <div data-role="collapsible">
+            <h2 id="context-menu">Context Menu</h2>
+            To open a context menu for any shared link, just make a long click on it. After a few seconds application will open a context menu like this:
+            <div class="docImage">
+                <img src="{% get_static_prefix %}image/docs/context-menu.png" alt="Context Menu" height="180"/><br/>
+                <div class="label">Context Menu</div>
+            </div>
+        </div>
+
+        <div data-role="collapsible">
+            <h3 id="reshare-link">Re-Share a Link</h3>
+            You may re-share a link again. Re-share used to open the link in your desktop browser again.
+            Make a long click on the link you want to re-share. Application will open a context menu like this:
+        </div>
+
+        <div data-role="collapsible">
+            <h3 id="remove-link">Remove a Link</h3>
+            You may remove a link. This link will also be removed from history. Just select a <em>Remove</em> option in context menu for shared link.
+        </div>
+
+        <div data-role="collapsible">
+            <h3 id="share-via">Send a Link</h3>
+            You may send link to another application, like Browser, Mail and so on. Just select a <em>Send To</em> option in context menu for shared link.
+        </div>
+
+        <div data-role="collapsible">
+            <h3 id="copy-link">Copy Link into Clipboard</h3>
+            You may copy a link into clipboard buffer to past it somewhere else. Just select a <em>Copy Link</em> option in context menu for shared link.
+        </div>
+    </div>
+   
+    
+{% endblock %}

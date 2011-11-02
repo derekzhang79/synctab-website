@@ -1,0 +1,57 @@
+{% extends 'mobile/main_layout.html' %}
+
+{% load static %}
+
+{% block title %}How To Use Chrome Extension{% endblock %}
+
+{% block header %}
+    <h1>Chrome Extension</h1>
+    <a href="javascript:void(0);" data-rel="back" data-icon="back">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+    <h3>Options Page</h3>
+
+        <p>Options page is available from "Manage Extensions" page. Open your "Manage Extensions" page (this depends on
+        your Chrome version), find a SyncTab plugin.</p>
+        <div class="docImage">
+            <a href="{% get_static_prefix %}image/docs/synctab-extension.png" rel="external">
+                <img src="{% get_static_prefix %}image/docs/synctab-extension.png" alt="SyncTab Chrome Extension" width="220"/></a>
+            <div class="label">SyncTab Extension</div>
+        </div>
+
+        <p>And click on an <em>Options</em> link. You'll see a page like:</p>
+
+        <div class="docImage">
+            <a href="{% get_static_prefix %}image/docs/synctab-chrome-options.jpg" rel="external">
+                <img src="{% get_static_prefix %}image/docs/synctab-chrome-options.jpg" alt="Chrome Options" width="220"/></a>
+            <div class="label">Options Page</div>
+        </div>
+
+    <div data-role="collapsible-set">
+        <div data-role="collapsible">
+            <h3 id="current-account">View Currently Used Account</h3>
+            Open SyncTab Extension Options page. If you're registered now, you'll will see an <em>Account</em> item with
+            a currently registered user email.
+        </div>
+
+        <div data-role="collapsible">
+            <h3 id="logout">Logout</h3>
+            Open SyncTab Extension Options page. If you're registered now, you'll will see
+            an <em>Account</em> item with a <em>Logout</em> button. Click on <em>Logout</em> button.
+        </div>
+
+        <div data-role="collapsible">
+            <h3 id="bookmarks">Add Links to Bookmarks</h3>
+            Open SyncTab Extension Options page. Select Yes for <em>Add Tabs to Bookmarks</em> option.
+        </div>
+
+        <div data-role="collapsible">
+            <h3 id="notifications">On/Off Notifications</h3>
+            Open SyncTab Extension Options page. Select Yes or No for <em>Show Notifications</em> option.
+        </div>
+    </div>
+
+{% endblock %}

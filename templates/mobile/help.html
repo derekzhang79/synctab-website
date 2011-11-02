@@ -1,0 +1,18 @@
+{% extends 'mobile/main_layout.html' %}
+
+{% load static %}
+
+{% block title %}SyncTab Documentation{% endblock %}
+
+{% block header %}
+    <h1>Help</h1>
+    <a href="javascript:void(0);" data-rel="back" data-icon="back">Back</a>
+{% endblock %}
+
+{% block content %}
+    <ul data-role="listview">
+        <li><a href="{% url m_getting_started %}">Getting Started</a></li>
+        <li><a href="{% url m_how_to_use_android_app %}">How to Use Android Application</a></li>
+        <li><a href="{% url m_how_to_use_chrome_ext %}">How to Use Chrome Application</a></li>
+    </ul>
+{% endblock %}

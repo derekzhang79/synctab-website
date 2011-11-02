@@ -1,40 +1,36 @@
-
-from django.http import HttpResponse
 from django.shortcuts import render
-from django.template import loader
-from django.conf import settings
-from django.utils.encoding import smart_str
-from website.sitemap import WebsiteSitemap
 
 import mail
 
-def sitemap(request):
-    page = request.GET.get('p', 1)
-    domain = settings.DOMAIN
-
-    sitemap = WebsiteSitemap()
-    urls = sitemap.get_urls(domain, page)
-
-    xml = smart_str(loader.render_to_string('sitemap.xml', {'urlset': urls}))
-    return HttpResponse(xml, mimetype='application/xml')
-
-def robots(request):
-    robots = smart_str(loader.render_to_string('robots.txt'))
-    return HttpResponse(robots, mimetype='text/plain')
-
 def home(request):
-    return render(request, 'desktop/index.html')
+    return render(request, 'mobile/index.html')
 
 
 def download(request):
-    return render(request, 'desktop/download.html')
+    return render(request, 'mobile/download.html')
 
 
 def screenshots(request):
-    return render(request, 'desktop/screenshots.html')
+    return render(request, 'mobile/screenshots.html')
+
+
+def help(request):
+    return render(request, 'mobile/help.html')
+
+
+def getting_started(request):
+    return render(request, 'mobile/getting_started.html')
+
+
+def how_to_use_android_app(request):
+    return render(request, 'mobile/how_to_use_android_app.html')
+
+
+def how_to_use_chrome_ext(request):
+    return render(request, 'mobile/how_to_use_chrome_ext.html')
+
 
 def contact(request):
-
     model = {
         'success': False,
         'error': False,
@@ -58,7 +54,8 @@ def contact(request):
             model['email'] = email
             model['message'] = message
 
-    return render(request, 'desktop/contact.html', model)
+    return render(request, 'mobile/contact.html', model)
+
 
 def submitIssue(request):
     model = {
@@ -87,16 +84,4 @@ def submitIssue(request):
             model['module'] = module
             model['description'] = description
 
-    return render(request, 'desktop/submitIssue.html', model)
-
-def help(request):
-    return render(request, 'desktop/help.html')
-
-def getting_started(request):
-    return render(request, 'desktop/getting_started.html')
-
-def how_to_use_android_app(request):
-    return render(request, 'desktop/how_to_use_android_app.html')
-
-def how_to_use_chrome_ext(request):
-    return render(request, 'desktop/how_to_use_chrome_ext.html')
+    return render(request, 'mobile/submitIssue.html', model)

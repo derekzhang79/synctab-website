@@ -1,0 +1,43 @@
+{% extends 'mobile/main_layout.html' %}
+
+{% load static %}
+
+{% block title %}SyncTab Screenshots{% endblock %}
+
+{% block header %}
+    <h1>Screenshots</h1>
+    <a href="javascript:void(0);" data-rel="back" data-icon="back">Back</a>
+{% endblock %}
+
+{% block content %}
+
+    <h4 id="android">Android Application</h4>
+
+    <ul class="screenshots">
+        <li><a href="{% get_static_prefix %}screenshots/synctab-android-login.png" title="Login" rel="external"><img
+                src="{% get_static_prefix %}screenshots/synctab-android-login-small.png" alt="Login"/></a></li>
+        <li><a href="{% get_static_prefix %}screenshots/synctab-android-register.png" rel="external" title="Register"><img
+                src="{% get_static_prefix %}screenshots/synctab-android-register-small.png" alt="Register"/></a></li>
+        <li><a href="{% get_static_prefix %}screenshots/synctab-android-list.png" rel="external" title="Home"><img
+                src="{% get_static_prefix %}screenshots/synctab-android-list-small.png" alt="List"/></a></li>
+        <li><a href="{% get_static_prefix %}screenshots/synctab-android-shared.png" rel="external" title="Share a Tab"><img
+                src="{% get_static_prefix %}screenshots/synctab-android-shared-small.png" alt="Share"/></a></li>
+        <li><a href="{% get_static_prefix %}screenshots/synctab-android-share-via.png" rel="external" title="Share Via"><img
+                src="{% get_static_prefix %}screenshots/synctab-android-share-via-small.png" alt="Share Via"/></a></li>
+        <li><a href="{% get_static_prefix %}screenshots/synctab-android-context-menu.png" rel="external" title="Context Menu"><img
+                src="{% get_static_prefix %}screenshots/synctab-android-context-menu-small.png" alt="Context Menu"/></a></li>
+    </ul>
+
+
+    <h4 id="chrome">Chrome Extension</h4>
+
+    <ul class="screenshots">
+        <li><a href="{% get_static_prefix %}screenshots/synctab-chrome-login.jpg" rel="external" title="Login Page"><img
+                src="{% get_static_prefix %}screenshots/synctab-chrome-login-small.png" alt="Login"/></a></li>
+        <li><a href="{% get_static_prefix %}screenshots/synctab-chrome-register.jpg" rel="external" title="Register Page"><img
+                src="{% get_static_prefix %}screenshots/synctab-chrome-register-small.png" alt="Register"/></a></li>
+        <li><a href="{% get_static_prefix %}screenshots/synctab-chrome-options.jpg" rel="external" title="SyncTab Options"><img
+                src="{% get_static_prefix %}screenshots/synctab-chrome-options-small.png" alt="Options"/></a></li>
+    </ul>
+
+{% endblock %}
