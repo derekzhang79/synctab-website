@@ -9,71 +9,20 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Download</h1>
+    <h3 id="android">Android Application</h3>
+    <p>
+        <strong>Latest Version</strong>: 1.0b<br/>
+        <strong>Release Date</strong>: 27 Oct 2011<br/>
+        <strong>Supported Android</strong>: 2.1 - latest
+    </p>
+    <a href="downloads/synctab.apk" data-role="button" data-icon="check">Download Now</a>
 
-    <h2 id="android">
-        <img src="{% get_static_prefix %}image/android-icon.png" alt="Android app"/>
-        Android Application
-    </h2>
-    <div class="paragraph">
-        <div>
-            <div class="getSyncTabDownloads">
-                <p><strong>Latest Version</strong>: 1.0b</p>
+    <h3 id="chrome">Chrome Extension</h3>
+    <p>
+        <strong>Latest Version</strong>: 1.0b<br/>
+        <strong>Release Date</strong>: 27 Oct 2011<br/>
+        <strong>Supported Chrome</strong>: 4.0 - latest
+    </p>
+    <a href="downloads/synctab.cfx" data-role="button" data-icon="check">Download Now</a>
 
-                <p><strong>Release Date</strong>: 27 Oct 2011</p>
-
-                <p><strong>Supported Android Version</strong>: 2.1 - latest</p>
-
-
-                <p class="downloadOption">
-                    <img src="{% get_static_prefix %}image/market_icon.png">
-                    <a href="downloads/synctab.apk">Download Now</a>
-                    <!--
-                    &nbsp;&nbsp;<span>or</span>&nbsp;&nbsp;
-                    <img src="static/image/market_icon.png">
-                    <a href="xx">Download on Android Market</a>
-                    <-->
-                </p>
-            </div>
-            <div class="getSyncTabLinks">
-                <ul>
-                    <li><a href="android/release-notes-1.0b.html">Release Notes</a></li>
-                    <li><a href="xxx">SyncTab on Android Market</a></li>
-                    <li><a href="{% url how_to_use_android_app %}">How To Use SyncTab Android App</a></li>
-                    <li><a href="{% url screenshots %}#android">Screenshots</a></li>
-                </ul>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-
-    <h2 id="chrome">
-        <img src="{% get_static_prefix %}image/chrome-icon.png" alt="Chrome extension"/>
-        Chrome Extension
-    </h2>
-    <div class="paragraph">
-        <div>
-            <div class="getSyncTabDownloads">
-                <p><strong>Latest Version</strong>: 1.0b</p>
-
-                <p><strong>Release Date</strong>: 27 Oct 2011</p>
-
-                <p><strong>Supported Chrome Version</strong>: 4.0 - latest</p>
-
-                <p class="downloadOption">
-                    <img src="{% get_static_prefix %}image/chrome-webstore-icon.png">
-                    <a href="downloads/synctab.cfx">Download Now</a>
-                </p>
-            </div>
-            <div class="getSyncTabLinks">
-                <ul>
-                    <li><a href="android/release-notes-1.0b.html">Release Notes</a></li>
-                    <li><a href="xxx">SyncTab on Chrome Web Store</a></li>
-                    <li><a href="{% url how_to_use_chrome_ext %}">How To Use SyncTab Chrome Extension</a></li>
-                    <li><a href="{% url screenshots %}#chrome">Screenshots</a></li>
-                </ul>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
 {% endblock %}

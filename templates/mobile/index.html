@@ -5,13 +5,6 @@
 {% block title %}SyncTab: send links from phone to your browser{% endblock %}
 
 {% block content %}
-    <div class="download">
-        <div class="downloadButton">
-            <a href="{% url download %}">Download</a>
-        </div>
-        current version is 1.0b
-    </div>
-
     <p class="emphasize">SyncTab is a simple way to send your links from Android to your favourite desktop browser</p>
 
     <div class="clear"></div>
@@ -87,22 +80,23 @@
     <div class="paragraph">
         You can download Android Application and Chrome Extension for free. You will need to install both Android
         Application to send links from your mobile and Chrome Extension to receive and open tabs in desktop browser.
+        <br/>
     </div>
     <div class="ui-grid-a">
-        <div class="ui-block-a">
-            <a href="{% url download %}"><img src="{% get_static_prefix %}image/android_mini.png" class="noShadow" alt="Android app"></a>
-            <p><a href="{% url download %}">Android Application</a></p>
+        <div class="ui-block-a" style="text-align: center;">
+            <a href="{% url m_download %}"><img src="{% get_static_prefix %}image/android_mini.png" class="noShadow" alt="Android app"></a>
+            <p><a href="{% url m_download %}">Android<br/>Application</a></p>
         </div>
-        <div class="ui-block-b">
-            <a href="{% url download %}"><img src="{% get_static_prefix %}image/chrome_mini.png" class="noShadow" alt="Chrome extension"></a>
-            <p><a href="{% url download %}">Chrome Extension</a></p>
+        <div class="ui-block-b" style="text-align: center;">
+            <a href="{% url m_download %}"><img src="{% get_static_prefix %}image/chrome_mini.png" class="noShadow" alt="Chrome extension"></a>
+            <p><a href="{% url m_download %}">Chrome<br/>Extension</a></p>
         </div>
     </div>
 
     <h4>Useful Links</h4>
     <ul>
-        <li><a href="{% url getting_started %}">Getting Started</a></li>
-        <li><a href="{% url how_to_use_android_app %}">How to Use Android Application</a></li>
-        <li><a href="{% url how_to_use_chrome_ext %}">How to Use Chrome Extensition</a></li>
+        <li><a href="{% url m_getting_started %}">Getting Started</a></li>
+        <li><a href="{% url m_how_to_use_android_app %}">How to Use Android Application</a></li>
+        <li><a href="{% url m_how_to_use_chrome_ext %}">How to Use Chrome Extensition</a></li>
     </ul>
 {% endblock %}

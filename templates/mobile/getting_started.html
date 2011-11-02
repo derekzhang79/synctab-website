@@ -6,7 +6,6 @@
 
 {% block header %}
     <h1>Getting Started</h1>
-    <a href="javascript:void(0);" data-rel="back" data-icon="back">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -23,7 +22,7 @@
         <div data-role="collapsible">
             <h2 id="install-android">Install Android Application</h2>
 
-            <p>Download and install Android application on <a href="{% url download %}">Download</a> page.</p>
+            <p>Download and install Android application on <a href="{% url m_download %}">Download</a> page.</p>
             After install you will find a new application on your Android phone called SyncTab. SyncTab icon looks like on
             image:
             <div class="docImage">
@@ -66,7 +65,7 @@
 
         <div data-role="collapsible">
             <h2 id="install-chrome">Install Chrome Extension</h2>
-            <p>Download and install Chrome Extension from <a href="{% url download %}">Download</a> page.</p>
+            <p>Download and install Chrome Extension from <a href="{% url m_download %}">Download</a> page.</p>
             After you install Chrome extension, a new tab will be opened in your browser.
             This tab contains a page with login form. User your SyncTab account email and password
             (as you have already registered when installed Android application, use the same email and password) to login.
@@ -80,7 +79,7 @@
 
             <p>Now your browser will be opening a shared links as a new tabs!</p>
 
-            <p>You can read more about <a href="{% url how_to_use_chrome_ext %}">how to use Chrome extension</a>.</p>
+            <p>You can read more about <a href="{% url m_how_to_use_chrome_ext %}">how to use Chrome extension</a>.</p>
         </div>
 
         <div data-role="collapsible">
