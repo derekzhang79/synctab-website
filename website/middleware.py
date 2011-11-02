@@ -3,9 +3,9 @@ import re
 
 class MobileWebsiteMiddleware(object):
 
-    MOBI_REG = re.compile('(iphone|windows ce|mobile|phone|symbian|mini|pda' +
-                          '|ipod|mobi|blackberry|playbook|vodafone|kindle)',
-                          re.IGNORECASE)
+    MOBI_REG = re.compile(
+        '(iphone|windows ce|mobile|phone|symbian|mini|pda|ipod|mobi|blackberry|playbook|vodafone|kindle)',
+        re.IGNORECASE)
 
     def process_request(self, request):
 
