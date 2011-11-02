@@ -12,7 +12,6 @@ class MobileWebsiteMiddleware(object):
         if request.META.has_key('HTTP_USER_AGENT'):
             userAgent = request.META.get('HTTP_USER_AGENT')
             match = self.MOBI_REG.search(userAgent)
-
             path = request.path_info
 
             if match:
@@ -20,9 +19,7 @@ class MobileWebsiteMiddleware(object):
                 if not path.startswith('/m/'):
                     # need to redirect
                     return HttpResponseRedirect('/m' + path)
-            else:
-                # not mobile browser, check if need to redirect to desktop
-                if path.startswith('/m/'):
+            elif path.startswith('/m/'):
                     # need to redirect to normal version
                     return HttpResponseRedirect(path[2:])
 
