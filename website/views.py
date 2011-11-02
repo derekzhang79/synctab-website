@@ -18,6 +18,10 @@ def sitemap(request):
     xml = smart_str(loader.render_to_string('sitemap.xml', {'urlset': urls}))
     return HttpResponse(xml, mimetype='application/xml')
 
+def robots(request):
+    robots = smart_str(loader.render_to_string('robots.txt'))
+    return HttpResponse(robots, mimetype='text/plain')
+
 def home(request):
     return render(request, 'index.html')
 
