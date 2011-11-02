@@ -13,7 +13,7 @@
         {% csrf_token %}
 
         {% if error %}
-            <div class="error">Please check all fields are filled. Everything is <del>important</del> required!</div>
+            <div class="error">Please check all fields are filled. Everything is required!</div>
         {% endif %}
         {% if success %}
             <div class="hurray">Thank you for contacting! We will be on touch soon.</div>
