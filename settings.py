@@ -12,8 +12,8 @@ SEND_BROKEN_LINK_EMAILS = False
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'synctab.db',            # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -90,7 +90,6 @@ SECRET_KEY = 're^i_(cyfvurj(6hlvs7wmx3vmokt_+2v4hr-qqak9^x%#p3xb'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -122,10 +121,10 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    #'django.contrib.sitemaps',
+    #'django.contrib.admin',
+    #'django.contrib.admindocs',
+    
     'synctab.website',
 )
 
@@ -163,3 +162,5 @@ SUBMIT_ISSUE_FROM = 'website@synctab.khmelyuk.com'
 SUBMIT_ISSUE_SUBJECT = '[dev] Issue Submission at %s'
 
 GA_CODE = None
+
+DOMAIN = "localhost:8000"

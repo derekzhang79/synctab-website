@@ -1,7 +1,22 @@
-# Create your views here.
+
+from django.http import HttpResponse
 from django.shortcuts import render
+from django.template import loader
+from django.conf import settings
+from django.utils.encoding import smart_str
+from website.sitemap import WebsiteSitemap
 
 import mail
+
+def sitemap(request):
+    page = request.GET.get('p', 1)
+    domain = settings.DOMAIN
+
+    sitemap = WebsiteSitemap()
+    urls = sitemap.get_urls(domain, page)
+
+    xml = smart_str(loader.render_to_string('sitemap.xml', {'urlset': urls}))
+    return HttpResponse(xml, mimetype='application/xml')
 
 def home(request):
     return render(request, 'index.html')

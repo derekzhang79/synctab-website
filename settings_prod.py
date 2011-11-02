@@ -89,8 +89,7 @@ SECRET_KEY = 're^i_(ckKsdPa.*1,28s;dk6hlvs7wmx3vmokt_+2v4hr-qqak9^x%#p3xb'
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+    'django.template.loaders.app_directories.Loader'
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -122,10 +121,9 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    #'django.contrib.admin',
+    #'django.contrib.admindocs',
+    
     'synctab.website',
 )
 
@@ -163,3 +161,4 @@ SUBMIT_ISSUE_FROM = 'website@synctab.khmelyuk.com'
 SUBMIT_ISSUE_SUBJECT = 'Issue Submission at %s'
 
 GA_CODE = 'UA-4438157-6'
+DOMAIN = "synctab.khmelyuk.com"
