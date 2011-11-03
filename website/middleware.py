@@ -3,23 +3,24 @@ import re
 
 class MobileWebsiteMiddleware(object):
 
+    MOBILE_PREFIX = '/m/'
     MOBI_REG = re.compile(
         '(iphone|windows ce|mobile|phone|symbian|mini|pda|ipod|mobi|blackberry|playbook|vodafone|kindle)',
         re.IGNORECASE)
 
     def process_request(self, request):
 
-        if request.META.has_key('HTTP_USER_AGENT'):
+        if 'HTTP_USER_AGENT' in request.META:
             userAgent = request.META.get('HTTP_USER_AGENT')
-            match = self.MOBI_REG.search(userAgent)
+            matches = self.MOBI_REG.search(userAgent)
             path = request.path_info
 
-            if match:
-                # mobile browser, check if need to redirect to mobile
-                if not path.startswith('/m/'):
-                    # need to redirect
+            if matches:
+                # from mobile browser, check if need to redirect to mobile
+                if not path.startswith(self.MOBILE_PREFIX):
+                    # need to redirect to mobile version
                     return HttpResponseRedirect('/m' + path)
-            elif path.startswith('/m/'):
+            elif path.startswith(self.MOBILE_PREFIX):
                     # need to redirect to normal version
                     return HttpResponseRedirect(path[2:])
 
