@@ -15,11 +15,8 @@
         <div>
             <div class="getSyncTabDownloads">
                 <p><strong>Latest Version</strong>: 1.0b</p>
-
                 <p><strong>Release Date</strong>: 27 Oct 2011</p>
-
                 <p><strong>Supported Android Version</strong>: 2.1 - latest</p>
-
 
                 <p class="downloadOption">
                     <img src="{% get_static_prefix %}image/market_icon.png">
@@ -33,7 +30,7 @@
             </div>
             <div class="getSyncTabLinks">
                 <ul>
-                    <li><a href="android/release-notes-1.0b.html">Release Notes</a></li>
+                    {% comment %}<li><a href="android/release-notes-1.0b.html">Release Notes</a></li>{% endcomment %}
                     <li><a href="xxx">SyncTab on Android Market</a></li>
                     <li><a href="{% url how_to_use_android_app %}">How To Use SyncTab Android App</a></li>
                     <li><a href="{% url screenshots %}#android">Screenshots</a></li>
@@ -51,19 +48,17 @@
         <div>
             <div class="getSyncTabDownloads">
                 <p><strong>Latest Version</strong>: 1.0b</p>
-
                 <p><strong>Release Date</strong>: 27 Oct 2011</p>
-
                 <p><strong>Supported Chrome Version</strong>: 4.0 - latest</p>
 
                 <p class="downloadOption">
                     <img src="{% get_static_prefix %}image/chrome-webstore-icon.png">
-                    <a href="downloads/synctab.cfx">Download Now</a>
+                    <a href="https://chrome.google.com/webstore/detail/hjjpbgkpgdfnjkgbghajpgcnaolcfcgf">Download Now</a>
                 </p>
             </div>
             <div class="getSyncTabLinks">
                 <ul>
-                    <li><a href="android/release-notes-1.0b.html">Release Notes</a></li>
+                    {% comment %}<li><a href="android/release-notes-1.0b.html">Release Notes</a></li>{% endcomment %}
                     <li><a href="xxx">SyncTab on Chrome Web Store</a></li>
                     <li><a href="{% url how_to_use_chrome_ext %}">How To Use SyncTab Chrome Extension</a></li>
                     <li><a href="{% url screenshots %}#chrome">Screenshots</a></li>
