@@ -40,13 +40,22 @@
 
       <div id="content">
           <div class="wrapper">
-            <div id="menu">
-              <a href="{% url home %}">Home</a>
-              <a href="{% url download %}">Download</a>
-              <a href="{% url help %}">Help</a>
-              <a href="{% url contact %}">Contact</a>
-              <a href="{% url submitIssue %}">Submit Issue</a>
+            <div id="top">
+                <div id="menu">
+                  <a href="{% url home %}">Home</a>
+                  <a href="{% url download %}">Download</a>
+                  <a href="{% url help %}">Help</a>
+                  <a href="{% url contact %}">Contact</a>
+                  <a href="{% url submitIssue %}">Submit Issue</a>
+                </div>
+
+                <div id="icons">
+                  <a href="http://twitter.com/SyncTabApp"><img src="{% get_static_prefix %}image/twitter.png" alt="Twitter" title="Twitter"/></a>
+                  <a href="https://plus.google.com/b/107142819623825449286/"><img src="{% get_static_prefix %}image/google_plus.png" alt="Google+" title="Google+"/></a>
+                </div>
             </div>
+
+            <div class="clear"></div>
 
             {% block content %}{% endblock %}
 
@@ -61,10 +70,10 @@
             <h2>Links</h2>
             <ul class="links">
               <li><a href="{% url download %}">Download</a></li>
-              <li><a href="{% url screenshots %}">Screenshots</a></li>
               <li><a href="{% url help %}">Help</a></li>
               <li><a href="{% url contact %}">Contact</a></li>
-              <li><a href="{% url submitIssue %}">Submit Issue</a></li>
+              <li><a href="http://twitter.com/SyncTabApp">Twitter</a></li>
+              <li><a href="https://plus.google.com/b/107142819623825449286/">Google+</a></li>
             </ul>
           </div>
           <div class="footerSection">

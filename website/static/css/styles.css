@@ -155,7 +155,11 @@ ul#facts { font-size: 1.2em; color: #434343; line-height: 26px; padding: 10px 0 
 	background-position:0 -150px;
 }
 
-#menu { top: -25px; position: relative; padding: 0 0 5px 0;}
+#menu { float: left; top: -25px; position: relative; padding: 0 0 5px 0;}
+#icons { float: right; padding: 0 0 5px 0;  }
+#icons img { width: 36px; padding: 5px; }
+#icons a { top: -40px; position: relative; opacity: 0.9; }
+#icons a:hover { top: -44px; opacity: 1; }
 
 #menu a {
 	box-shadow: 0 0 20px #ffffff;
