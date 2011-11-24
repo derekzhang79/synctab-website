@@ -12,8 +12,8 @@
 
     <div data-role="collapsible-set">
         <div data-role="collapsible">
-            <h2 id="share-link">Share a Link</h2>
-            <p>Lets try to share a link from Android browser. Start a browser application on your phone and open some page in it,
+            <h2 id="share-link">Send a Link</h2>
+            <p>Lets try to send a link from Android browser. Start a browser application on your phone and open some page in it,
                 e.g. <a href="http://google.com">http://google.com</a>. Click on Menu and search for "Share page" option.
                 After you select it, you will see a "Share via" dialog with a list of applications you want to share with.
                 Find and select a SyncTab option here. </p>
@@ -25,7 +25,17 @@
             </div>
 
             <p>After you select a SyncTab option, you will see a new screen from SyncTab application.
-                Here you will see a message that a tab is syncing. Wait for a few seconds.
+                Here you will see a dialog box called "Send To..." with a few tags.
+                You can send a link with specified tag only. Such you limit what devices and browsers
+                can receive and open link. For example, you can send a link to Home browser, or to Android tablet.</p>
+
+            <div class="docImage">
+                <img src="{% get_static_prefix %}image/docs/send-to.png" alt="Shared Link" height="240"/>
+                <div class="label">Send To</div>
+            </div>
+
+            <p>
+                Then you will see a message that a tab is syncing. Wait for a few seconds.
                 If you have an Internet connection up, you will see a next message:</p>
 
             <div class="docImage">
@@ -34,7 +44,7 @@
                 <div class="label">Shared Link</div>
             </div>
 
-            <p>Now the link is shared. And as soon as you'll have a connection to the internet, it will be available in your desktop browser.</p>
+            <p>Now the link is sent. And as soon as you'll have a connection to the internet, it will be available in your desktop browser.</p>
         </div>
 
         <div data-role="collapsible">
@@ -60,9 +70,9 @@
         </div>
 
         <div data-role="collapsible">
-            <h3 id="reshare-link">Re-Share a Link</h3>
-            You may re-share a link again. Re-share used to open the link in your desktop browser again.
-            Make a long click on the link you want to re-share. Application will open a context menu like this:
+            <h3 id="reshare-link">Re-Send a Link</h3>
+            You may re-send a link again. Re-send used to send the link with specified tag again, so it can be opened
+            again in your browser. Make a long click on the link you want to re-send, and press the Re-send option.
         </div>
 
         <div data-role="collapsible">

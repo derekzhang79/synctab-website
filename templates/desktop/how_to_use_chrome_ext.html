@@ -18,7 +18,7 @@
         <p>And click on an <em>Options</em> link. You'll see a page like:</p>
 
         <div class="docImage">
-            <img src="{% get_static_prefix %}image/docs/synctab-chrome-options.jpg" alt="Chrome Options" height="240"/><br/>
+            <img src="{% get_static_prefix %}image/docs/synctab-chrome-options.jpg" alt="Chrome Options" height="380"/><br/>
             <div class="label">Options Page</div>
         </div>
     </div>
@@ -26,6 +26,19 @@
     <h3 id="current-account">View Currently Used Account</h3>
     <div class="paragraph">
         Open SyncTab Extension Options page. If you're registered now, you'll will see an <em>Account</em> item with a currently registered user email.
+    </div>
+
+    <h3 id="current-tag">Change Browser Tag</h3>
+    <div class="paragraph">
+        Tag used to filter the links to open in the browser. For example, you can select current browser tag to be Home, so any links
+        send with tag Hope will be opened in this browser. Such, you may have different Chrome browsers and have different tags for them.
+        For example, one browser can be installed in your work computer and another in your home computer.
+        Having them different current tags allows you to send links between them. Funny page can be send to the Home browser, while
+        some professional article can be send to the Work browser. And you don't need to have them both online to send links.
+        You may send a link from Home computer, then turn it off, come to work, turn on your work computer, open browser and in a minute
+        browser will receive links.
+
+        <p><strong>Default Chrome browser tag is Chrome.</strong> But you can change it to be Home or Work.</p>
     </div>
 
     <h3 id="logout">Logout</h3>
@@ -44,5 +57,18 @@
         Open SyncTab Extension Options page. Select Yes or No for <em>Show Notifications</em> option.
     </div>
 
+    <h2 id="send-link">Send a Link</h2>
+    <div class="paragraph">
+        You can send a link from Chrome browser to another Chrome browser or Android device.
+        There is an SyncTab icon in the toolbar on the right side of the address bar.
+        <div class="docImage">
+            <img src="{% get_static_prefix %}image/docs/synctab-chrome-toolbar-icon.png" alt="SyncTab Icon"/><br/>
+            <div class="label">SyncTab toolbar icon</div>
+        </div>
+
+        Click on this icon to see the list of tags. Click on any tag to share a current tab page with specified tag.
+        <br/>If you right-click on any link on the page, you'll see a SyncTab item in the content menu.
+        Use it to share a link with specified tag without even opening it!
+    </div>
 
 {% endblock %}

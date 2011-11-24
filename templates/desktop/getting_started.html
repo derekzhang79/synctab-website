@@ -8,7 +8,7 @@
     <h1>Getting Started</h1>
 
     <div class="paragraph">
-        This page is to help you to start using SyncTab to share a links from Android phone to your desktop browser.
+        This page is to help you to start using SyncTab to send a links from Android phone to Chrome browser.
         
         First you will need to <a href="#install-android">install Android application</a> and then <a href="#install-chrome">install Chrome extension</a>.
         You will need to register an account if you don't have yet a SyncTab account.
@@ -67,9 +67,9 @@
         <p>You can read more about <a href="{% url how_to_use_chrome_ext %}">how to use Chrome extension</a>.</p>
     </div>
 
-    <h2>Share a Link</h2>
+    <h2>Send a Link</h2>
     <div class="paragraph">
-        <p>Here I describe how to share a link from Android phone to your desktop browser, like Chrome.
+        <p>Here I describe how to send a link from Android phone to your desktop browser, like Chrome.
         Android platform allows you to send a content to different application. This content can be a link, a text or image.
         SyncTab supports only processing a links. This means, you can use numerous Android applications (like Browser, Google Reader and so on)
         to send a link to SyncTab application. SyncTab application will do it best to open this link in your desktop browser.</p>
@@ -81,7 +81,7 @@
             <img src="{% get_static_prefix %}image/docs/share.png" alt="Send To Icon" class="noShadow"/>
         </div>
 
-        <p>Lets try to share a link from Android browser. Start a browser application on your phone and open some page with it,
+        <p>Lets try to send a link from Android browser. Start a browser application on your phone and open some page with it,
             e.g. <a href="http://google.com">http://google.com</a>. Click on Menu and search for "Share page" option.
             After you select it, you will see a "Share via" dialog with a list of applications you want to share with.
             Find and select a SyncTab option here. </p>
@@ -92,7 +92,10 @@
         </div>
 
         <p>After you select a SyncTab option, you will see a new screen from SyncTab application.
-            Here you will see a message that a tab is syncing. Wait for a few seconds.
+            There you will see a dialog box called "Send To..." with a few tags.
+            You can send a link with specified tag only. Such you limit what devices and browsers
+            can receive and open link. For example, you can send a link to Home browser, or to Android tablet.
+            After you will see a message that a tab is syncing. Wait for a few seconds.
             If you have an Internet connection up, you will see a next message:</p>
 
         <div class="docImage">
@@ -100,7 +103,7 @@
             <div class="label">Shared Link</div>
         </div>
 
-        <p>And now, less than in a minute, your desktop browser will open a new tab with the shared link!</p>
+        <p>And now, less than in a minute, your desktop browser will open a new tab for the received link!</p>
     </div>
 
 {% endblock %}
