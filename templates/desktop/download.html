@@ -7,33 +7,6 @@
 {% block content %}
     <h1>Download</h1>
 
-    <h2 id="android">
-        <img src="{% get_static_prefix %}image/android-icon.png" alt="Android app"/>
-        Android Application
-    </h2>
-    <div class="paragraph">
-        <div>
-            <div class="getSyncTabDownloads">
-                <p><strong>Latest Version</strong>: 0.7</p>
-                <p><strong>Release Date</strong>: 24 Nov 2011</p>
-                <p><strong>Supported Android Version</strong>: 2.1 - latest</p>
-
-                <p class="downloadOption">
-                    <img src="{% get_static_prefix %}image/market_icon.png">
-                    <a href="https://market.android.com/details?id=com.khmlabs.synctab" target="_blank">Download Now</a>
-                </p>
-            </div>
-            <div class="getSyncTabLinks">
-                <ul>
-                    <li><a href="https://market.android.com/details?id=com.khmlabs.synctab" target="_blank">SyncTab on Android Market</a></li>
-                    <li><a href="{% url how_to_use_android_app %}">How To Use SyncTab Android App</a></li>
-                    <li><a href="{% url screenshots %}#android">Screenshots</a></li>
-                </ul>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-
     <h2 id="chrome">
         <img src="{% get_static_prefix %}image/chrome-icon.png" alt="Chrome extension"/>
         Chrome Extension
@@ -55,6 +28,33 @@
                     <li><a href="https://chrome.google.com/webstore/detail/hjjpbgkpgdfnjkgbghajpgcnaolcfcgf" target="_blank">SyncTab on Chrome Web Store</a></li>
                     <li><a href="{% url how_to_use_chrome_ext %}">How To Use SyncTab Chrome Extension</a></li>
                     <li><a href="{% url screenshots %}#chrome">Screenshots</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <h2 id="android">
+        <img src="{% get_static_prefix %}image/android-icon.png" alt="Android app"/>
+        Android Application
+    </h2>
+    <div class="paragraph">
+        <div>
+            <div class="getSyncTabDownloads">
+                <p><strong>Latest Version</strong>: 0.7</p>
+                <p><strong>Release Date</strong>: 24 Nov 2011</p>
+                <p><strong>Supported Android Version</strong>: 2.1 - latest</p>
+
+                <p class="downloadOption">
+                    <img src="{% get_static_prefix %}image/market_icon.png">
+                    <a href="https://market.android.com/details?id=com.khmlabs.synctab" target="_blank">Download Now</a>
+                </p>
+            </div>
+            <div class="getSyncTabLinks">
+                <ul>
+                    <li><a href="https://market.android.com/details?id=com.khmlabs.synctab" target="_blank">SyncTab on Android Market</a></li>
+                    <li><a href="{% url how_to_use_android_app %}">How To Use SyncTab Android App</a></li>
+                    <li><a href="{% url screenshots %}#android">Screenshots</a></li>
                 </ul>
             </div>
             <div class="clear"></div>
